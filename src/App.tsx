@@ -1,0 +1,39 @@
+import { Background } from "@/components/layout/Background";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { Metrics } from "@/components/sections/Metrics";
+import { Experience } from "@/components/sections/Experience";
+import { Projects } from "@/components/sections/Projects";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Skills } from "@/components/sections/Skills";
+import { Certifications } from "@/components/sections/Certifications";
+import { Contact } from "@/components/sections/Contact";
+
+export default function App() {
+  return (
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-accent-foreground"
+      >
+        Skip to content
+      </a>
+      <Background />
+      <Navbar />
+      <main id="main-content">
+        <Hero />
+        <Metrics />
+        <About />
+        <Experience />
+        <Projects />
+        <Testimonials />
+        <Skills />
+        <Certifications />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
+}

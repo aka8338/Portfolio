@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280" fill="none" role="img" aria-label="Profile photo placeholder for Aklilu Beyero">
+  <rect width="280" height="280" rx="24" fill="#111827"/>
+  <rect x="1" y="1" width="278" height="278" rx="23" stroke="#ffffff" stroke-opacity="0.08"/>
+  <circle cx="140" cy="108" r="52" fill="#1F2937" stroke="#38BDF8" stroke-opacity="0.35"/>
+  <path d="M56 236c18-44 52-66 84-66s66 22 84 66" fill="#1F2937" stroke="#38BDF8" stroke-opacity="0.2"/>
+  <text x="140" y="262" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#9CA3AF">Replace with your photo</text>
+</svg>

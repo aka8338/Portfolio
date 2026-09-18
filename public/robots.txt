@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akliluportfolio.biomedicalhorizonnetwork.com/sitemap.xml

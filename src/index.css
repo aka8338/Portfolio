@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode — clean slate with indigo accent */
+    --background: 210 40% 98%;
+    --background-secondary: 214 32% 95%;
+    --foreground: 222 47% 11%;
+    --foreground-muted: 215 16% 42%;
+    --card: 0 0% 100% / 0.72;
+    --card-foreground: 222 47% 11%;
+    --accent: 245 58% 51%;
+    --accent-hover: 245 58% 44%;
+    --accent-secondary: 158 64% 40%;
+    --accent-foreground: 0 0% 100%;
+    --border: 222 47% 11% / 0.08;
+    --success: 142 71% 36%;
+    --error: 0 72% 51%;
+    --ring: 245 58% 51%;
+    --glow: 245 58% 51% / 0.15;
+    --glow-secondary: 158 64% 40% / 0.12;
+  }
+
+  .dark {
+    /* Dark mode — deep navy with emerald accent (Brittany Chiang–inspired) */
+    --background: 222 47% 5%;
+    --background-secondary: 220 39% 9%;
+    --foreground: 210 40% 96%;
+    --foreground-muted: 215 20% 65%;
+    --card: 220 39% 12% / 0.6;
+    --card-foreground: 210 40% 96%;
+    --accent: 158 64% 52%;
+    --accent-hover: 158 72% 44%;
+    --accent-secondary: 252 56% 67%;
+    --accent-foreground: 222 47% 7%;
+    --border: 210 40% 96% / 0.08;
+    --success: 142 71% 45%;
+    --error: 0 84% 60%;
+    --ring: 158 64% 52%;
+    --glow: 158 64% 52% / 0.18;
+    --glow-secondary: 252 56% 67% / 0.14;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply min-h-screen bg-background font-sans text-body text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent via-accent-secondary to-accent bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  .animate-text-shimmer {
+    animation: textShimmer 4s ease-in-out infinite;
+  }
+
+  @keyframes textShimmer {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-text-shimmer {
+      animation: none;
+    }
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
